@@ -17,7 +17,8 @@ public class Player {
             for (JsonElement player : players) {
                 JsonObject playerObject = player.getAsJsonObject();
                 if (playerObject.get("name").getAsString().equals("LegJava")) {
-                    Logger.log(playerObject.getAsString());
+                    Logger.log(playerObject.get("name").toString());
+                    //Logger.log(playerObject.getAsString());
                 }
                     /*JsonArray holeCards = playerObject.get("hole_cards").getAsJsonArray();
                     Logger.log(holeCards.getAsString());
