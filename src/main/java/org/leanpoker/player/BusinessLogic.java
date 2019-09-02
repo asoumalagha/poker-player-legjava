@@ -10,10 +10,9 @@ public class BusinessLogic {
 
 
     private JsonArray listOfCardsRanks;
-    private Set<Integer> intListOfRanks;
-    private Set<String> stringSetOfCards;
-    private HashMap<Integer, Integer> mapOfCards;
-    private ArrayList<String> stringArrayOfRanks;
+    private Set<String> stringSetOfCards = new HashSet<>();
+    private HashMap<Integer, Integer> mapOfCards = new HashMap<>();
+    private ArrayList<String> stringArrayOfRanks = new ArrayList<>();
 
     public BusinessLogic(JsonArray listOfCardRanks) {
         this.listOfCardsRanks = listOfCardRanks;
