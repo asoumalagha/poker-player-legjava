@@ -1,1 +1,1 @@
-web: ./gradlew -XX:+UseContainerSupport tomcatRun
+web: ./gradlew tomcatRun
