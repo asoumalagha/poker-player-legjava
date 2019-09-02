@@ -22,22 +22,21 @@ public class Player {
                 if (playerObject.get("name").getAsString().equals("LegJava")) {
                     JsonArray holeCards = playerObject.get("hole_cards").getAsJsonArray();
                     for (JsonElement card : holeCards) {
-                        Logger.log("IT'S IN THE CARD LOOP");
                         cardRanks.add(card.getAsJsonObject().get("rank"));
                     }
                     break;
 
                 } else {
-                    Logger.log("Kiscica");
+                    Logger.log("ERROR ERROR ERROR");
                 }
             }
+
             for(JsonElement card: commCards){
                 cardRanks.add(card.getAsJsonObject().get("rank"));
             }
-            String toLog = cardRanks.getAsString();
-            Logger.log(toLog);
 
         } catch (Exception e) {
+            Logger.log(e);
             return 999;
         }
         return 999;
