@@ -10,7 +10,7 @@ public class Player {
 
     public static int betRequest(JsonElement request) {
 
-        return 10;
+        return 500;
     }
 
     public static void showdown(JsonElement game) {
