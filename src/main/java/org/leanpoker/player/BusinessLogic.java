@@ -110,7 +110,7 @@ public class BusinessLogic {
         }else if(countPairs() == 1){
             return 250;
         }else {
-            return 1000;
+            return 800;
         }
     }
 
