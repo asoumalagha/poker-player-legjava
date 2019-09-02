@@ -22,9 +22,7 @@ public class Player {
                 }
                 break;
             }
-
         }
-
 
         return 0;
     }
