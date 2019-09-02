@@ -35,13 +35,13 @@ public class Player {
                 cardRanks.add(card.getAsJsonObject().get("rank"));
             }
 
-
+            BusinessLogic bl = new BusinessLogic(cardRanks);
+            return bl.createBet();
 
         } catch (Exception e) {
             Logger.log(e);
-            return 800;
+            return 50;
         }
-        return 800;
     }
 
     public static void showdown(JsonElement game) {
