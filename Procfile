@@ -1,1 +1,1 @@
-web: ./gradlew --no-daemon tomcatRun
+web: ./gradlew tomcatRun
