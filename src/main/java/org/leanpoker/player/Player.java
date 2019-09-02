@@ -3,6 +3,7 @@ package org.leanpoker.player;
 import com.google.gson.JsonElement;
 import com.google.gson.*;
 
+import java.util.Map;
 
 public class Player {
 
@@ -21,12 +22,14 @@ public class Player {
                     Logger.log(cardString);
                 }
                 break;
+            } else {
+                Logger.log("Kiscica");
             }
 
         }
 
 
-        return 0;
+        return 500;
     }
 
     public static void showdown(JsonElement game) {
