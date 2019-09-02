@@ -14,6 +14,7 @@ public class Player {
             JsonObject data = request.getAsJsonObject();
             JsonArray players = data.get("players").getAsJsonArray();
             JsonArray cardRanks = new JsonArray();
+            JsonArray commCards = data.get("community_cards").getAsJsonArray();
 
             for (JsonElement player : players) {
                 JsonObject playerObject = player.getAsJsonObject();
@@ -21,7 +22,7 @@ public class Player {
                 if (playerObject.get("name").getAsString().equals("LegJava")) {
                     JsonArray holeCards = playerObject.get("hole_cards").getAsJsonArray();
                     for (JsonElement card : holeCards) {
-                        Logger.log(card.getAsString());
+                        //Logger.log(card.getAsString());
                         cardRanks.add(card.getAsJsonObject().get("rank"));
                     }
                     break;
@@ -30,6 +31,10 @@ public class Player {
                     Logger.log("Kiscica");
                 }
             }
+            for(JsonElement card: commCards){
+                cardRanks.add(card.getAsJsonObject().get("rank"));
+            }
+            Logger.log(cardRanks.getAsString());
 
         } catch (Exception e) {
             return 999;
