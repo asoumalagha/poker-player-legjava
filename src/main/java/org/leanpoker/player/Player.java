@@ -34,6 +34,7 @@ public class Player {
 
             for(JsonElement card: commCards){
                 cardRanks.add(card.getAsJsonObject().get("rank"));
+                Logger.log("Community card added!");
             }
 
             BusinessLogic bl = new BusinessLogic(cardRanks);
