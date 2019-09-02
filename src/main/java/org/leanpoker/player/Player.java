@@ -24,6 +24,7 @@ public class Player {
                     for (JsonElement card : holeCards) {
                         cardRanks.add(card.getAsJsonObject().get("rank"));
                     }
+                    Logger.log("Card's are added");
                     break;
 
                 } else {
