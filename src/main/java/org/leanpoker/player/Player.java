@@ -35,6 +35,8 @@ public class Player {
                 cardRanks.add(card.getAsJsonObject().get("rank"));
             }
 
+
+
         } catch (Exception e) {
             Logger.log(e);
             return 999;
