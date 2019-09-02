@@ -17,22 +17,15 @@ public class Player {
             for (JsonElement player : players) {
                 JsonObject playerObject = player.getAsJsonObject();
                 if (playerObject.get("name").getAsString().equals("LegJava")) {
-                    Logger.log(playerObject.get("name").toString());
-                    //Logger.log(playerObject.getAsString());
-                }
-                    /*JsonArray holeCards = playerObject.get("hole_cards").getAsJsonArray();
+                    JsonArray holeCards = playerObject.get("hole_cards").getAsJsonArray();
                     Logger.log(holeCards.getAsString());
-                    for (JsonElement card : holeCards){
+                    for (JsonElement card : holeCards) {
                         Logger.log(card.getAsString());
                     }
                     break;
                 } else {
                     Logger.log("Kiscica");
                 }
-                Logger.log(playerObject.toString());
-            }
-
-                     */
             }
         } catch (Exception e) {
             return 800;
