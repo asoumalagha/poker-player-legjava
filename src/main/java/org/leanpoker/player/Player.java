@@ -12,7 +12,7 @@ public class Player {
     public static int betRequest(JsonElement request) {
         Gson gson = new Gson();
         JsonObject data = request.getAsJsonObject();
-        JsonObject players = data.get("players").getAsJsonObject();
+        JsonArray players = data.get("players").getAsJsonArray();
 
         Map playersList = gson.fromJson(players, Map.class);
 
