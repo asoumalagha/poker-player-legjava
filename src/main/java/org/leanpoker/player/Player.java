@@ -14,14 +14,15 @@ public class Player {
         JsonArray players = data.get("players").getAsJsonArray();
 
         for(JsonElement player: players){
-            JsonObject jsonObject = player.getAsJsonObject();
+            Logger.log(player.toString());
+            /*JsonObject jsonObject = player.getAsJsonObject();
             if(jsonObject.get("name").toString().equals("LegJava")){
                 JsonArray wholeCards = jsonObject.get("hole_cards").getAsJsonArray();
                 Logger.log(wholeCards.getAsString());
                 break;
             } else {
                 Logger.log("Kiscica");
-            }
+            }*/
 
         }
 
