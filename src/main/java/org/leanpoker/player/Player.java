@@ -38,9 +38,9 @@ public class Player {
             Logger.log(toLog);
 
         } catch (Exception e) {
-            return 1000;
+            return 800;
         }
-        return 1000;
+        return 800;
     }
 
     public static void showdown(JsonElement game) {
