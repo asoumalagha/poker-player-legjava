@@ -34,7 +34,8 @@ public class Player {
             for(JsonElement card: commCards){
                 cardRanks.add(card.getAsJsonObject().get("rank"));
             }
-            Logger.log(cardRanks.getAsString());
+            String toLog = cardRanks.getAsString();
+            Logger.log(toLog);
 
         } catch (Exception e) {
             return 999;
