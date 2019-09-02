@@ -18,9 +18,7 @@ public class Player {
 
         String playersListString = playersList.get("LegJava").toString();
 
-        Logger logger = new Logger();
-        logger.log(playersListString);
-
+        Logger.log(playersListString);
 
         return 500;
     }
