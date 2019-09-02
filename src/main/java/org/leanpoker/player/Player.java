@@ -15,23 +15,16 @@ public class Player {
             JsonArray players = data.get("players").getAsJsonArray();
 
             for (JsonElement player : players) {
-                JsonObject playerObject = player.getAsJsonObject().get("LegJava").getAsJsonObject();
-                Logger.log(playerObject.toString());
-            if(playerObject.get("name").getAsString().equals("LegJava")){
-                JsonArray holeCards = playerObject.get("hole_cards").getAsJsonArray();
-                Logger.log(holeCards.getAsString());
-                for (JsonElement card : holeCards){
-                    Logger.log(card.getAsString());
+                JsonObject playerObject = player.getAsJsonObject();
+                if (playerObject.get("name").toString().equals("LegJava")) {
+                    JsonArray wholeCards = playerObject.get("hole_cards").getAsJsonArray();
+                    Logger.log(wholeCards.getAsString());
+                    break;
+                } else {
+                    Logger.log("Kiscica");
                 }
-                break;
-            } else {
-                Logger.log("Kiscica");
+                Logger.log(playerObject.toString());
             }
-
-
-
-            }
-
         } catch (Exception e) {
             return 800;
         }
