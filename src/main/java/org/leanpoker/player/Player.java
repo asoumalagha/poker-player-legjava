@@ -29,9 +29,9 @@ public class Player {
                 }
             }
         } catch (Exception e) {
-            return 800;
+            return 999;
         }
-        return 800;
+        return 999;
     }
 
     public static void showdown(JsonElement game) {
