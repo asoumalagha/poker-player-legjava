@@ -14,7 +14,7 @@ public class Player {
 
         for(JsonElement player: players){
             JsonObject jsonObject = player.getAsJsonObject();
-            if(jsonObject.get("name").equals("LegJava")){
+            if(jsonObject.get("name").toString().equals("LegJava")){
                 JsonArray wholeCards = jsonObject.get("hole_cards").getAsJsonArray();
                 for(JsonElement card: wholeCards){
                     String cardString = card.toString();
