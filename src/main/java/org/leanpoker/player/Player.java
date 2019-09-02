@@ -3,9 +3,6 @@ package org.leanpoker.player;
 import com.google.gson.JsonElement;
 import com.google.gson.*;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 public class Player {
@@ -24,9 +21,12 @@ public class Player {
         Logger logger = new Logger();
         logger.log(playersListString);
 
+
         return 500;
     }
 
     public static void showdown(JsonElement game) {
+
     }
+
 }
