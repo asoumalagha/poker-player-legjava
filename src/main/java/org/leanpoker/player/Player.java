@@ -21,7 +21,7 @@ public class Player {
                 if (playerObject.get("name").getAsString().equals("LegJava")) {
                     JsonArray holeCards = playerObject.get("hole_cards").getAsJsonArray();
                     for (JsonElement card : holeCards) {
-                        Logger.log(card.getAsString());
+                        Logger.log("IT'S IN THE CARD LOOP");
                         cardRanks.add(card.getAsJsonObject().get("rank"));
                     }
                     break;
