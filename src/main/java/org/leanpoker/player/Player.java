@@ -17,10 +17,7 @@ public class Player {
             JsonObject jsonObject = player.getAsJsonObject();
             if(jsonObject.get("name").toString().equals("LegJava")){
                 JsonArray wholeCards = jsonObject.get("hole_cards").getAsJsonArray();
-                for(JsonElement card: wholeCards){
-                    String cardString = card.toString();
-                    Logger.log(cardString);
-                }
+                Logger.log(wholeCards.getAsString());
                 break;
             } else {
                 Logger.log("Kiscica");
