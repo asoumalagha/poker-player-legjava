@@ -17,6 +17,7 @@ public class BusinessLogic {
 
     public BusinessLogic(JsonArray listOfCardRanks) {
         this.listOfCardsRanks = listOfCardRanks;
+        createHashMap(listOfCardsRanks);
     }
 
     public void createHashMap(JsonArray listOfCardsRanks) throws ClassCastException{
