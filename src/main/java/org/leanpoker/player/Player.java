@@ -20,7 +20,7 @@ public class Player {
 
         Logger.log(playersListString);
 
-        return 500;
+        return 0;
     }
 
     public static void showdown(JsonElement game) {
